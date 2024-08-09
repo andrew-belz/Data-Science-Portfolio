@@ -4,9 +4,9 @@ Title: My Projects
 
 # Signature Projects
 
-## Project 1: Socioeconomic Inequality Statistical Analysis
+## Socioeconomic Inequality Statistical Analysis
 
-Analysis Project using R: Uncovered trends in poverty and race in relation to crime rates using official US Census data. Showcased abilities in hypothesis testing, linear regression, ANOVA, model validation, API data extraction, exploratory data analysis, and data visualization (ggplot).
+R-markdown analysis project using R: Uncovered trends in poverty and race in relation to crime rates using official US Census data. Showcased abilities in hypothesis testing, linear regression, ANOVA, model validation, API data extraction, exploratory data analysis, and data visualization (ggplot).
 
 ## Project 2: Stock Price Tracking Application
 
