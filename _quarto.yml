@@ -4,7 +4,7 @@ project:
 website:
   title: "Andrew Belz- Data Science Portfolio"
   back-to-top-navigation: true
-  repo-url: "https://github.com/pbelz1"
+  repo-url: "https://github.com/andrew-belz"
   navbar:
     left:
       - href: index.html

@@ -2,4 +2,98 @@
 Title: My Projects
 ---
 
-# More coming very soon!
+# Signature Projects
+
+## Project 1: Socioeconomic Inequality Statistical Analysis
+
+Analysis Project using R: Uncovered trends in poverty and race in relation to crime rates using official US Census data. Showcased abilities in hypothesis testing, linear regression, ANOVA, model validation, API data extraction, exploratory data analysis, and data visualization (ggplot).
+
+## Project 2: Stock Price Tracking Application
+
+Python Application: implemented and automated ETL process to retrieve data from Yahoo Finance API via yfinance python module, appropriately transforming resulting data with pandas, and loading resulting data frame into a Plotly Dash app graphically and tabularly: Showcase abilities with Python, Dash, Plotly, Pandas, yfinance, HTML, and CSS.
+
+## Skills Developed
+These projects are intended to showcase the abilities I have developed in three main areas:
+
+1. __Python__
+
+My experience with python consists of the following:
+
+- Pandas
+- NumPy
+- Scikit-learn
+- API data extraction
+- Requests
+- Data wrangling
+- Data visualization
+- Data manipulation
+- Exploratory data analysis
+- machine learning
+- Reading/writing to different file types
+- .csv
+- .json
+- SQLite
+- Jupyter notebooks
+- Quarto markdown
+
+2. __R__
+
+My experience with R consists of the following:
+
+- GGPlot
+- Mosaic
+- Tidyverse
+- Statistics
+- Data wrangling
+- Data visualization
+- Data manipulation
+- Exploratory data analysis
+- reading various file types
+- R-markdown
+
+
+3. __Statistics__
+
+My experience with statistics involves using R for data manipulation and analysis for the following techniques:
+
+- Hypothesis testing
+- T-tests
+- Wilcoxon tests
+- Mann-Whitney tests
+- Analysis of variance (ANOVA)
+- Kruskal-Wallis tests
+- Chi-squared tests
+- Simple and multiple linear regression
+- Simple and multiple logistic regression
+- Permutation testing
+- Model validation
+
+
+
+# Other Projects
+
+## Relevant Coursework
+
+This section holds smaller projects completed as part of university course assignments.
+
+::: {.panel-tabset }
+
+#### Data Science Programming
+
+This class focused on using Python for data wrangling, cleaning, visualization, analysis, and introductory machine learning.
+
+#### Intermediate Statistics
+
+## Intermediate Statistics
+
+This class focused on using R for hypothesis testing, introductory regression techniques, model validation, and data wrangling, cleaning, and visualization.
+
+#### Introduction to Databases
+
+This class introduced relational databases. It focused on mapping entity-relationship diagrams (ERDs), writing SQL queries, and emphasized utilizing standard industry best practices for data storage and use. 
+
+:::
+
+## Minor Projects
+
+Sometimes I complete projects that aren't very large or significant, and yet still showcase my abilities in some way. This is where you can find these projects. They will be sorted by skills and technologies used.
