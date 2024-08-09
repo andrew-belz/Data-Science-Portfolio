@@ -10,7 +10,6 @@ Hello! My name is Andrew Belz. I am a student at BYU-Idaho studying data science
 ## Quick Links
 
 <div style="display: inline;">
-  <a href="about.html" class='landing-page-links'>About Me</a>
   <a href="resume.html" class='landing-page-links'>My Resume</a>
   <a href="projects.html" class='landing-page-links'>Projects</a>
 </div>
@@ -23,5 +22,15 @@ Hello! My name is Andrew Belz. I am a student at BYU-Idaho studying data science
 <a href="https://github.com/andrew-belz" target="_blank">GitHub</a>
 <a href="https://www.linkedin.com/in/andrewbelz/" target="_blank">LinkedIn</a>
 <a href='mailto:andrewbelzjr@gmail.com' target='_blank'>andrewbelzjr@gmail.com</a>
-<a href='tel:+18056244436' target='_blank'>(805)624-4436</a>
+<a href='tel:+18056244436' target='_blank'>(805) 624-4436</a>
 </div>
+
+## About Me
+
+I grew up in southern California, in a town called Simi Valley. I am the oldest of four; I have two younger sisters, and one younger brother. I love chess, cooking, and motorcycles! I will happily have a lengthy conversation about any of those topics, anywhere, anytime. 
+
+## About this Site
+
+I created this site for multiple purposes. First and foremost, I want to get my projects that I have worked on out there so that I can properly showcase my abilities! I love coming up with new projects to do, and I am constantly pushing myself beyond my limits. I love to experiment with new ideas and technologies so that I can grow as a professional and a person. I love to learn about math, science, and technology because that is what is driving innovation today. 
+
+I sincerely hope that this portfolio adequately represents my passion!

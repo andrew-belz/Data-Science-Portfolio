@@ -9,10 +9,10 @@ website:
     left:
       - href: index.html
         text: Home
-      - href: about.html
-        text: About Me
       - href: resume.html
         text: My Resume
+      - href: projects.html
+        text: Projects
 
 format:
   html:
