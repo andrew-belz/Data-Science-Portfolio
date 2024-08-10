@@ -46,7 +46,7 @@
     "href": "projects.html#relevant-coursework",
     "title": "Signature Projects",
     "section": "Relevant Coursework",
-    "text": "Relevant Coursework\nThis section holds smaller projects completed as part of university course assignments.\n\nData Science ProgrammingIntermediate StatisticsIntroduction to Databases\n\n\n\nData Science Programming\nThis class focused on using Python for data wrangling, cleaning, visualization, analysis, and introductory machine learning.\n\n\n\n\nIntermediate Statistics\nThis class focused on using R for hypothesis testing, introductory regression techniques, model validation, and data wrangling, cleaning, and visualization.\n\n\n\n\nIntermediate Statistics\nThis class introduced relational databases. It focused on mapping entity-relationship diagrams (ERDs), writing SQL queries, and emphasized utilizing standard industry best practices for data storage and use."
+    "text": "Relevant Coursework\nThis section holds smaller projects completed as part of university course assignments.\n\nData Science ProgrammingIntermediate StatisticsIntroduction to Databases\n\n\n\nData Science Programming\nThis class focused on using Python for data wrangling, cleaning, visualization, analysis, and introductory machine learning.\n\n\n\n\nIntermediate Statistics\nThis class focused on using R for hypothesis testing, introductory regression techniques, model validation, and data wrangling, cleaning, and visualization.\n\n\n\n\nIntroduction to Databases\nThis class introduced relational databases. It focused on mapping entity-relationship diagrams (ERDs), writing SQL queries, and emphasized utilizing standard industry best practices for data storage and use."
   },
   {
     "objectID": "projects.html#data-science-programming-1",
@@ -63,11 +63,11 @@
     "text": "Intermediate Statistics\nThis class focused on using R for hypothesis testing, introductory regression techniques, model validation, and data wrangling, cleaning, and visualization."
   },
   {
-    "objectID": "projects.html#intermediate-statistics-2",
-    "href": "projects.html#intermediate-statistics-2",
+    "objectID": "projects.html#introduction-to-databases-1",
+    "href": "projects.html#introduction-to-databases-1",
     "title": "Signature Projects",
-    "section": "Intermediate Statistics",
-    "text": "Intermediate Statistics\nThis class introduced relational databases. It focused on mapping entity-relationship diagrams (ERDs), writing SQL queries, and emphasized utilizing standard industry best practices for data storage and use."
+    "section": "Introduction to Databases",
+    "text": "Introduction to Databases\nThis class introduced relational databases. It focused on mapping entity-relationship diagrams (ERDs), writing SQL queries, and emphasized utilizing standard industry best practices for data storage and use."
   },
   {
     "objectID": "projects.html#minor-projects",

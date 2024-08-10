@@ -1,16 +1,14 @@
 /* css styles */
 .landing-page-links{
-    margin-right: 20px
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
-.contact-me{
-    display: inline;
-    border-top-width: 5px;
-    border-top-color: 'black';
-}
-
-.contact-me a{
-    margin-right: 20px
+.landing-page-links:hover{
+    color: darkslategray;
+    font-weight: normal;
 }
 
 .resume-contact a{

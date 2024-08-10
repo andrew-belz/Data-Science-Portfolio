@@ -4,11 +4,11 @@
 # Welcome to my Portfolio!
 
 <div id='welcome-message' style='display: flex; justify-content: space-between; gap: 0px'>
-<div style='flex: 0.9;'>
+<div style='flex: 1;'>
 <img id='profile-picture' src='images/profile_picture.jpg' style="width: 75%; height: auto;">
 </div>
 
-<div style='flex: 1.1;'>
+<div style='flex: 1;'>
 Hello! My name is Andrew Belz. I am a student at BYU-Idaho studying data science. On this website, you will find up-to-date information on projects I have accomplished, inside and outside of the classroom. This website is currently in the very beginning stages, so if you would like more information from me about anything, don't hesitate to reach out!
 </div>
 </div>

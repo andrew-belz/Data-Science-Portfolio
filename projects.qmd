@@ -96,7 +96,7 @@ This class focused on using R for hypothesis testing, introductory regression te
 
 #### Introduction to Databases
 
-## Intermediate Statistics
+## Introduction to Databases
 
 This class introduced relational databases. It focused on mapping entity-relationship diagrams (ERDs), writing SQL queries, and emphasized utilizing standard industry best practices for data storage and use. 
 
