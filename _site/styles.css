@@ -1,4 +1,25 @@
 /* css styles */
+#welcome-container{
+    display: flex; 
+    justify-content: space-between; 
+    gap: 0px
+}
+
+.welcome-element{
+    flex: auto;
+}
+
+#profile-picture{
+    width: 75%;
+    height: auto;
+}
+
+.quick-links-container{
+    display: flex; 
+    justify-content: space-between; 
+    gap: 10px
+}
+
 .landing-page-links{
     margin-right: 20px;
     text-decoration: none;
