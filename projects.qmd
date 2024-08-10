@@ -8,14 +8,18 @@ Title: My Projects
 
 R-markdown analysis project using R: Uncovered trends in poverty and race in relation to crime rates using official US Census data. Showcased abilities in hypothesis testing, linear regression, ANOVA, model validation, API data extraction, exploratory data analysis, and data visualization (ggplot).
 
+<a href= 'project_files/inequality_analysis.html' class='project-view-links'><h3>CLICK HERE TO VIEW</h3></a>
+
 ## Project 2: Stock Price Tracking Application
 
 Python Application: implemented and automated ETL process to retrieve data from Yahoo Finance API via yfinance python module, appropriately transforming resulting data with pandas, and loading resulting data frame into a Plotly Dash app graphically and tabularly: Showcase abilities with Python, Dash, Plotly, Pandas, yfinance, HTML, and CSS.
 
+<a href= 'stock_prices.html' class='project-view-links'><h3>CLICK HERE TO VIEW</h3></a>
+
 ## Skills Developed
 These projects are intended to showcase the abilities I have developed in three main areas:
 
-1. __Python__
+__1. Python__
 
 My experience with python consists of the following:
 
@@ -36,7 +40,7 @@ My experience with python consists of the following:
 - Jupyter notebooks
 - Quarto markdown
 
-2. __R__
+__2. R__
 
 My experience with R consists of the following:
 
@@ -52,7 +56,7 @@ My experience with R consists of the following:
 - R-markdown
 
 
-3. __Statistics__
+__3. Statistics__
 
 My experience with statistics involves using R for data manipulation and analysis for the following techniques:
 
@@ -72,6 +76,8 @@ My experience with statistics involves using R for data manipulation and analysi
 
 # Other Projects
 
+## COMING SOON!!!
+
 ## Relevant Coursework
 
 This section holds smaller projects completed as part of university course assignments.
@@ -79,6 +85,8 @@ This section holds smaller projects completed as part of university course assig
 ::: {.panel-tabset }
 
 #### Data Science Programming
+
+## Data Science Programming
 
 This class focused on using Python for data wrangling, cleaning, visualization, analysis, and introductory machine learning.
 
@@ -89,6 +97,8 @@ This class focused on using Python for data wrangling, cleaning, visualization, 
 This class focused on using R for hypothesis testing, introductory regression techniques, model validation, and data wrangling, cleaning, and visualization.
 
 #### Introduction to Databases
+
+## Intermediate Statistics
 
 This class introduced relational databases. It focused on mapping entity-relationship diagrams (ERDs), writing SQL queries, and emphasized utilizing standard industry best practices for data storage and use. 
 

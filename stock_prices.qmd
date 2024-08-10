@@ -1,0 +1,211 @@
+---
+title: Stock Price Tracker Application
+---
+
+# Still working on getting the app up and running on a server!
+## In the meantime, feel free to check out the code that I used.
+
+```{python}
+#| eval: false
+#| include: true
+
+from dash import Dash, html, dash_table, dcc, Input, Output, State, no_update
+import pandas as pd
+import plotly_express as px
+import yfinance as yf
+from datetime import datetime
+
+
+'''
+STRUCTURE OF THE APP
+1. defining functions to use to retrieve and display data and create plots
+2. initializing the app and app layout
+3. app callback, Inputs/Outputs, and callback function
+
+Dash inherits a certain format for code, as far as my research indicates, 
+so the app itself is best defined entirely in the main function at the very least.
+My research indicates that global scope would be even better and more straightforward,
+but using main() seems to work out okay. Function defaults are the intended
+values upon app startup.
+
+Documentation:
+https://finance.yahoo.com/lookup/
+https://pypi.org/project/yfinance/
+https://dash.plotly.com/
+https://plotly.com/python/plotly-express/
+
+'''
+
+#Functions for use within the app
+
+def get_ticker_object(ticker:str='^GSPC'):
+    #initializes object; this object is used in two different functions so it is more efficient to have it on larger scope in its own function
+    ticker_object = yf.Ticker(ticker)
+    return ticker_object
+
+def get_ticker_history_df(ticker_object, time:str = 'ytd'):
+   '''This code uses yfinance module to get historical data from the Yahoo 
+   Finance API. 
+   
+   Ticker: Gets data for S&P 500 using ticker '^GSPC' by default.
+   Takes any valid ticker identifier. 
+   
+   Time: default = 'ytd'; 
+   possible: ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max']
+   '''
+
+   if time != '1d':
+    #gets history given time frame
+      history = ticker_object.history(time)
+       #date is current index; resets index
+      df = pd.DataFrame(history).reset_index()
+      df= df.sort_values('Date', ascending = False)
+   elif time == '1d':
+      history = ticker_object.history(time, interval = '1m')
+      df = pd.DataFrame(history).reset_index()
+      df= df.sort_values('Datetime', ascending = True)
+
+   
+       
+       #more descriptive column names
+   old = df.columns[1:5]
+   new = [f'{col} (USD)' for col in df.columns[1:5]]
+   old_new_dict = dict(zip(old, new))
+   df = df.rename(columns = old_new_dict)
+
+   if time == '1d':
+      df['Datetime'] = pd.to_datetime(df['Datetime'])
+      df['Time'] = df['Datetime'].dt.time
+       
+
+    
+    #returns df
+   return df
+
+def get_stock_name(ticker_object):
+    info = ticker_object.info
+
+    if info != {'trailingPegRatio': None}: #this is the output when the query can't find the given stock
+        return info['longName']
+    else:
+        return 'Stock Not Found'
+
+#makes fig when time != '1d'; '1d' takes different time formatting on x-axis
+def get_ticker_history_fig(df, name):
+    fig = px.line(
+        df,
+        x = 'Date',
+        y = 'Close (USD)',
+    ).update_layout(
+        xaxis_title = 'Date',
+        yaxis_title = 'Daily Closing Price (USD)',
+        title = f'Closing Prices of Stocks over Time- {name}',
+        template = 'presentation'
+    )
+
+    return fig
+
+#makes fig when time == '1d' with hr/min on x-axis
+def get_ticker_history_fig_day_price(df, name):
+    fig = px.line(
+        df,
+        x = 'Time',
+        y = 'Close (USD)'
+    ).update_layout(
+        xaxis_title = '',
+        yaxis_title = 'Price',
+        title = f"Today's Price- {name}",
+        template = 'presentation'
+    ).update_xaxes(
+        tickformat='%I:%M %p' 
+        
+        '''
+        can't figure out why this doesn't work; I want to format
+        the time ticks differently but it won't work properly
+        '''
+    )
+
+    return fig
+
+#---------------------------------------------------------------------
+
+'''APP STARTS HERE'''
+
+def main():
+    #initializes Dash object 'app'; however, an initial callback is still made
+    app = Dash(__name__)
+
+    ticker_object = get_ticker_object('^GSPC')
+    name = get_stock_name(ticker_object)
+    df = get_ticker_history_df(ticker_object)
+    fig = get_ticker_history_fig(df, name)
+
+
+    #initializes layout of page
+    app.layout = html.Div([
+        html.Header([
+            html.H1('Stock Price Tracker', id = 'app-title', style = {'marginBottom': 5}),
+        html.H2(str(datetime.now().date().__format__('%B %d, %Y')), id = 'date-header', style = {'marginTop': 5})
+    ], id = 'header'),
+        html.P("Provide a ticker and select a time frame for data display. For example, FAANG tickers are 'FB', 'AMZN', 'AAPL', 'NFLX'; S&P 500 is '^GSPC'. For more info, visit the following site:"),
+        html.A('Yahoo Finance Lookup', href = 'https://finance.yahoo.com/lookup/', target='_blank', id = 'yf-link'),
+        html.Br(),
+        html.P('Select stock (press Enter to update):'),
+        dcc.Input(
+            id='stock-input',
+            type = 'text',
+            value = '^GSPC',
+            placeholder= 'Give any valid ticker (ex. ^GSCP is default):',
+            n_submit = 1
+        ),
+        html.P('Select timeframe:'),
+        dcc.Dropdown(
+            id = 'time-input',
+            options = ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'],
+            value = 'ytd', 
+            clearable = False
+        ),
+        html.Br(),
+        html.Hr(),
+        dcc.Graph(id='time-series-chart', style={'marginBottom': 20, 'marginTop': 20}),
+        html.Hr(style = {'marginBottom': 20}),
+        dash_table.DataTable(id= 'data-table', data=df.to_dict('records'), page_size = 10, style_table = {'backgroundColor': 'ivory'})
+    ])
+
+    #callback to the app; Input tracks input changes to produce Output
+    @app.callback(
+    [Output('data-table', 'data'), Output('time-series-chart', 'figure')],
+    [Input('stock-input', 'n_submit'), Input('time-input', 'value')],
+    [State('stock-input', 'value')]
+)
+
+    #callback function associated with new ticker or time frame
+    def update(n_submit, time_input, stock_input,):
+        if (stock_input and n_submit > 0) or time_input: #if stock changes and 'Enter', or time input changes
+            try:
+                ticker_object = get_ticker_object(str(stock_input))
+                df = get_ticker_history_df(ticker_object, time = str(time_input))
+                name = get_stock_name(ticker_object)
+
+                if time_input != '1d':
+                    fig = get_ticker_history_fig(df, name)
+                elif time_input == '1d':
+                    fig = get_ticker_history_fig_day_price(df, name)
+            except:
+                df = pd.DataFrame(columns= ['Close (USD)', 'Date'])
+                return df.to_dict('records'), get_ticker_history_fig(df, 'Stock Not Found')
+
+            return df.to_dict('records'), fig
+        
+        return no_update, no_update #won't update without new data
+    '''
+        to_dict('records') is necessary because Dash needs a JSON object
+        these functions inherit the form of the callback (specifically the order);
+        'stock-input' becomes stock_input arg, time-input becomes time_input arg
+        output df.to_dict('records') becomes Output('data-table'), fig becomes Output('time-series-chart')
+'''
+    app.run_server(debug=True) #debug=True for debugging functionality
+
+if __name__ == '__main__':
+    main()
+```

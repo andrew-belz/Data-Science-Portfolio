@@ -15,22 +15,22 @@ Passionate aspiring data scientist always looking for new challenges. Technicall
 
 ---
 
-### Project Experience Highlights
+### [Project Experience Highlights](projects.html){.resume-project-link}
 
-<a href='project_files/inequality_analysis.html' class='resume-project-link'><h4>Socioeconomic Inequality Statistical Analysis</h4></a>
+<a href='project_files/inequality_analysis.html' class='resume-project-link'><h4>Socioeconomic Inequality Statistical Analysis</h4>
 
-Analysis Project using R: Uncovered trends in poverty and race in relation to crime rates using official US Census data. Showcased abilities in hypothesis testing, linear regression, ANOVA, model validation, API data extraction, exploratory data analysis, and data visualization (ggplot).
+Analysis Project using R: Uncovered trends in poverty and race in relation to crime rates using official US Census data. Showcased abilities in hypothesis testing, linear regression, ANOVA, model validation, API data extraction, exploratory data analysis, and data visualization (ggplot).</a>
 
-<h4>Stock Price Tracking Application</h4>
+<a href='stock_prices.html' class='resume-project-link'><h4>Stock Price Tracking Application</h4>
 
-Python Application: implemented and automated ETL process to retrieve data from Yahoo Finance API via yfinance python module, appropriately transforming resulting data with pandas, and loading resulting data frame into a Plotly Dash app graphically and tabularly: Showcase abilities with Python, Dash, Plotly, Pandas, yfinance, HTML, and CSS.
+Python Application: implemented and automated ETL process to retrieve data from Yahoo Finance API via yfinance python module, appropriately transforming resulting data with pandas, and loading resulting data frame into a Plotly Dash app graphically and tabularly: Showcase abilities with Python, Dash, Plotly, Pandas, yfinance, HTML, and CSS.</a>
 
 ---
 
 ### Education
-Bachelor of Science in Data Science - Brigham Young University-Idaho\
+<a href='https://www.byui.edu/catalog/#/programs/41PwqJ9RZ' class='resume-project-link'>Bachelor of Science in Data Science - Brigham Young University-Idaho\
 4.0 GPA\
-Relevant Coursework: Data Science Programming, Intermediate Statistics, Introduction to Databases 
+Relevant Coursework: Data Science Programming, Intermediate Statistics, Introduction to Databases</a>
 
 ---
 
