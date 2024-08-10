@@ -74,9 +74,7 @@ My experience with statistics involves using R for data manipulation and analysi
 
 
 
-# Other Projects
-
-## COMING SOON!!!
+# Other Projects COMING SOON!!!
 
 ## Relevant Coursework
 
