@@ -1,1 +1,4 @@
+User-agent: *
+Disallow: /private/
+Allow: /
 Sitemap: https://andrew-belz.github.io/Data-Science-Portfolio/sitemap.xml
