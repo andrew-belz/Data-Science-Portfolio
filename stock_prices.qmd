@@ -116,13 +116,6 @@ def get_ticker_history_fig_day_price(df, name):
         yaxis_title = 'Price',
         title = f"Today's Price- {name}",
         template = 'presentation'
-    ).update_xaxes(
-        tickformat='%I:%M %p' 
-        
-        '''
-        can't figure out why this doesn't work; I want to format
-        the time ticks differently but it won't work properly
-        '''
     )
 
     return fig
