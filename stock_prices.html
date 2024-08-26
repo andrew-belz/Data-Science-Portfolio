@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stock Price Tracker Application – Andrew Belz- Data Science Portfolio</title>
+<title>Andrew Belz- Data Science Portfolio - Stock Price Tracker Application</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -136,7 +136,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -183,7 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Still working on getting the app up and running on a server!</h1>
 <section id="in-the-meantime-feel-free-to-check-out-the-code-that-i-used." class="level2">
 <h2 class="anchored" data-anchor-id="in-the-meantime-feel-free-to-check-out-the-code-that-i-used.">In the meantime, feel free to check out the code that I used.</h2>
-<div id="dd8252c9" class="cell" data-execution_count="1">
+<div id="9dab170e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> Dash, html, dash_table, dcc, Input, Output, State, no_update</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly_express <span class="im">as</span> px</span>
@@ -291,98 +291,91 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>        yaxis_title <span class="op">=</span> <span class="st">'Price'</span>,</span>
 <span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> <span class="ss">f"Today's Price- </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span>,</span>
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>        template <span class="op">=</span> <span class="st">'presentation'</span></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>    ).update_xaxes(</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>        tickformat<span class="op">=</span><span class="st">'%I:%M %p'</span> </span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>        <span class="st">'''</span></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="st">        can't figure out why this doesn't work; I want to format</span></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="st">        the time ticks differently but it won't work properly</span></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="st">        '''</span></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="co">#---------------------------------------------------------------------</span></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="co">'''APP STARTS HERE'''</span></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>    <span class="co">#initializes Dash object 'app'; however, an initial callback is still made</span></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>    app <span class="op">=</span> Dash(<span class="va">__name__</span>)</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>    ticker_object <span class="op">=</span> get_ticker_object(<span class="st">'^GSPC'</span>)</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>    name <span class="op">=</span> get_stock_name(ticker_object)</span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> get_ticker_history_df(ticker_object)</span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> get_ticker_history_fig(df, name)</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>    <span class="co">#initializes layout of page</span></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>    app.layout <span class="op">=</span> html.Div([</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>        html.Header([</span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>            html.H1(<span class="st">'Stock Price Tracker'</span>, <span class="bu">id</span> <span class="op">=</span> <span class="st">'app-title'</span>, style <span class="op">=</span> {<span class="st">'marginBottom'</span>: <span class="dv">5</span>}),</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>        html.H2(<span class="bu">str</span>(datetime.now().date().<span class="fu">__format__</span>(<span class="st">'%B </span><span class="sc">%d</span><span class="st">, %Y'</span>)), <span class="bu">id</span> <span class="op">=</span> <span class="st">'date-header'</span>, style <span class="op">=</span> {<span class="st">'marginTop'</span>: <span class="dv">5</span>})</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>    ], <span class="bu">id</span> <span class="op">=</span> <span class="st">'header'</span>),</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>        html.P(<span class="st">"Provide a ticker and select a time frame for data display. For example, FAANG tickers are 'FB', 'AMZN', 'AAPL', 'NFLX'; S&amp;P 500 is '^GSPC'. For more info, visit the following site:"</span>),</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>        html.A(<span class="st">'Yahoo Finance Lookup'</span>, href <span class="op">=</span> <span class="st">'https://finance.yahoo.com/lookup/'</span>, target<span class="op">=</span><span class="st">'_blank'</span>, <span class="bu">id</span> <span class="op">=</span> <span class="st">'yf-link'</span>),</span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>        html.Br(),</span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>        html.P(<span class="st">'Select stock (press Enter to update):'</span>),</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>        dcc.Input(</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>            <span class="bu">id</span><span class="op">=</span><span class="st">'stock-input'</span>,</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>            <span class="bu">type</span> <span class="op">=</span> <span class="st">'text'</span>,</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>            value <span class="op">=</span> <span class="st">'^GSPC'</span>,</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>            placeholder<span class="op">=</span> <span class="st">'Give any valid ticker (ex. ^GSCP is default):'</span>,</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>            n_submit <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="co">#---------------------------------------------------------------------</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="co">'''APP STARTS HERE'''</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>    <span class="co">#initializes Dash object 'app'; however, an initial callback is still made</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>    app <span class="op">=</span> Dash(<span class="va">__name__</span>)</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>    ticker_object <span class="op">=</span> get_ticker_object(<span class="st">'^GSPC'</span>)</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>    name <span class="op">=</span> get_stock_name(ticker_object)</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> get_ticker_history_df(ticker_object)</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> get_ticker_history_fig(df, name)</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>    <span class="co">#initializes layout of page</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>    app.layout <span class="op">=</span> html.Div([</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>        html.Header([</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>            html.H1(<span class="st">'Stock Price Tracker'</span>, <span class="bu">id</span> <span class="op">=</span> <span class="st">'app-title'</span>, style <span class="op">=</span> {<span class="st">'marginBottom'</span>: <span class="dv">5</span>}),</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>        html.H2(<span class="bu">str</span>(datetime.now().date().<span class="fu">__format__</span>(<span class="st">'%B </span><span class="sc">%d</span><span class="st">, %Y'</span>)), <span class="bu">id</span> <span class="op">=</span> <span class="st">'date-header'</span>, style <span class="op">=</span> {<span class="st">'marginTop'</span>: <span class="dv">5</span>})</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>    ], <span class="bu">id</span> <span class="op">=</span> <span class="st">'header'</span>),</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>        html.P(<span class="st">"Provide a ticker and select a time frame for data display. For example, FAANG tickers are 'FB', 'AMZN', 'AAPL', 'NFLX'; S&amp;P 500 is '^GSPC'. For more info, visit the following site:"</span>),</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>        html.A(<span class="st">'Yahoo Finance Lookup'</span>, href <span class="op">=</span> <span class="st">'https://finance.yahoo.com/lookup/'</span>, target<span class="op">=</span><span class="st">'_blank'</span>, <span class="bu">id</span> <span class="op">=</span> <span class="st">'yf-link'</span>),</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>        html.Br(),</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>        html.P(<span class="st">'Select stock (press Enter to update):'</span>),</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>        dcc.Input(</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>            <span class="bu">id</span><span class="op">=</span><span class="st">'stock-input'</span>,</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>            <span class="bu">type</span> <span class="op">=</span> <span class="st">'text'</span>,</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>            value <span class="op">=</span> <span class="st">'^GSPC'</span>,</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>            placeholder<span class="op">=</span> <span class="st">'Give any valid ticker (ex. ^GSCP is default):'</span>,</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>            n_submit <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>        html.P(<span class="st">'Select timeframe:'</span>),</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>        dcc.Dropdown(</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>            <span class="bu">id</span> <span class="op">=</span> <span class="st">'time-input'</span>,</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>            options <span class="op">=</span> [<span class="st">'1d'</span>, <span class="st">'5d'</span>, <span class="st">'1mo'</span>, <span class="st">'3mo'</span>, <span class="st">'6mo'</span>, <span class="st">'1y'</span>, <span class="st">'2y'</span>, <span class="st">'5y'</span>, <span class="st">'10y'</span>, <span class="st">'ytd'</span>, <span class="st">'max'</span>],</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>            value <span class="op">=</span> <span class="st">'ytd'</span>, </span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>            clearable <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>        ),</span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>        html.P(<span class="st">'Select timeframe:'</span>),</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>        dcc.Dropdown(</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>            <span class="bu">id</span> <span class="op">=</span> <span class="st">'time-input'</span>,</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>            options <span class="op">=</span> [<span class="st">'1d'</span>, <span class="st">'5d'</span>, <span class="st">'1mo'</span>, <span class="st">'3mo'</span>, <span class="st">'6mo'</span>, <span class="st">'1y'</span>, <span class="st">'2y'</span>, <span class="st">'5y'</span>, <span class="st">'10y'</span>, <span class="st">'ytd'</span>, <span class="st">'max'</span>],</span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>            value <span class="op">=</span> <span class="st">'ytd'</span>, </span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>            clearable <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>        ),</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>        html.Br(),</span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>        html.Hr(),</span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>        dcc.Graph(<span class="bu">id</span><span class="op">=</span><span class="st">'time-series-chart'</span>, style<span class="op">=</span>{<span class="st">'marginBottom'</span>: <span class="dv">20</span>, <span class="st">'marginTop'</span>: <span class="dv">20</span>}),</span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>        html.Hr(style <span class="op">=</span> {<span class="st">'marginBottom'</span>: <span class="dv">20</span>}),</span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>        dash_table.DataTable(<span class="bu">id</span><span class="op">=</span> <span class="st">'data-table'</span>, data<span class="op">=</span>df.to_dict(<span class="st">'records'</span>), page_size <span class="op">=</span> <span class="dv">10</span>, style_table <span class="op">=</span> {<span class="st">'backgroundColor'</span>: <span class="st">'ivory'</span>})</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>    ])</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>        html.Br(),</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>        html.Hr(),</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>        dcc.Graph(<span class="bu">id</span><span class="op">=</span><span class="st">'time-series-chart'</span>, style<span class="op">=</span>{<span class="st">'marginBottom'</span>: <span class="dv">20</span>, <span class="st">'marginTop'</span>: <span class="dv">20</span>}),</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>        html.Hr(style <span class="op">=</span> {<span class="st">'marginBottom'</span>: <span class="dv">20</span>}),</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>        dash_table.DataTable(<span class="bu">id</span><span class="op">=</span> <span class="st">'data-table'</span>, data<span class="op">=</span>df.to_dict(<span class="st">'records'</span>), page_size <span class="op">=</span> <span class="dv">10</span>, style_table <span class="op">=</span> {<span class="st">'backgroundColor'</span>: <span class="st">'ivory'</span>})</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>    ])</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>    <span class="co">#callback to the app; Input tracks input changes to produce Output</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>    <span class="at">@app.callback</span>(</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>    [Output(<span class="st">'data-table'</span>, <span class="st">'data'</span>), Output(<span class="st">'time-series-chart'</span>, <span class="st">'figure'</span>)],</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>    [Input(<span class="st">'stock-input'</span>, <span class="st">'n_submit'</span>), Input(<span class="st">'time-input'</span>, <span class="st">'value'</span>)],</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>    [State(<span class="st">'stock-input'</span>, <span class="st">'value'</span>)]</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>    <span class="co">#callback to the app; Input tracks input changes to produce Output</span></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>    <span class="at">@app.callback</span>(</span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>    [Output(<span class="st">'data-table'</span>, <span class="st">'data'</span>), Output(<span class="st">'time-series-chart'</span>, <span class="st">'figure'</span>)],</span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>    [Input(<span class="st">'stock-input'</span>, <span class="st">'n_submit'</span>), Input(<span class="st">'time-input'</span>, <span class="st">'value'</span>)],</span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>    [State(<span class="st">'stock-input'</span>, <span class="st">'value'</span>)]</span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>    <span class="co">#callback function associated with new ticker or time frame</span></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(n_submit, time_input, stock_input,):</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (stock_input <span class="kw">and</span> n_submit <span class="op">&gt;</span> <span class="dv">0</span>) <span class="kw">or</span> time_input: <span class="co">#if stock changes and 'Enter', or time input changes</span></span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span>:</span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>                ticker_object <span class="op">=</span> get_ticker_object(<span class="bu">str</span>(stock_input))</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>                df <span class="op">=</span> get_ticker_history_df(ticker_object, time <span class="op">=</span> <span class="bu">str</span>(time_input))</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>                name <span class="op">=</span> get_stock_name(ticker_object)</span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> time_input <span class="op">!=</span> <span class="st">'1d'</span>:</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>                    fig <span class="op">=</span> get_ticker_history_fig(df, name)</span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>                <span class="cf">elif</span> time_input <span class="op">==</span> <span class="st">'1d'</span>:</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>                    fig <span class="op">=</span> get_ticker_history_fig_day_price(df, name)</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>            <span class="cf">except</span>:</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>                df <span class="op">=</span> pd.DataFrame(columns<span class="op">=</span> [<span class="st">'Close (USD)'</span>, <span class="st">'Date'</span>])</span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> df.to_dict(<span class="st">'records'</span>), get_ticker_history_fig(df, <span class="st">'Stock Not Found'</span>)</span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> df.to_dict(<span class="st">'records'</span>), fig</span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> no_update, no_update <span class="co">#won't update without new data</span></span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="co">        to_dict('records') is necessary because Dash needs a JSON object</span></span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="co">        these functions inherit the form of the callback (specifically the order);</span></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="co">        'stock-input' becomes stock_input arg, time-input becomes time_input arg</span></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="co">        output df.to_dict('records') becomes Output('data-table'), fig becomes Output('time-series-chart')</span></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>    app.run_server(debug<span class="op">=</span><span class="va">True</span>) <span class="co">#debug=True for debugging functionality</span></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>    main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>    <span class="co">#callback function associated with new ticker or time frame</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(n_submit, time_input, stock_input,):</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (stock_input <span class="kw">and</span> n_submit <span class="op">&gt;</span> <span class="dv">0</span>) <span class="kw">or</span> time_input: <span class="co">#if stock changes and 'Enter', or time input changes</span></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span>:</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>                ticker_object <span class="op">=</span> get_ticker_object(<span class="bu">str</span>(stock_input))</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>                df <span class="op">=</span> get_ticker_history_df(ticker_object, time <span class="op">=</span> <span class="bu">str</span>(time_input))</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>                name <span class="op">=</span> get_stock_name(ticker_object)</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> time_input <span class="op">!=</span> <span class="st">'1d'</span>:</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>                    fig <span class="op">=</span> get_ticker_history_fig(df, name)</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>                <span class="cf">elif</span> time_input <span class="op">==</span> <span class="st">'1d'</span>:</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>                    fig <span class="op">=</span> get_ticker_history_fig_day_price(df, name)</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>            <span class="cf">except</span>:</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>                df <span class="op">=</span> pd.DataFrame(columns<span class="op">=</span> [<span class="st">'Close (USD)'</span>, <span class="st">'Date'</span>])</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> df.to_dict(<span class="st">'records'</span>), get_ticker_history_fig(df, <span class="st">'Stock Not Found'</span>)</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> df.to_dict(<span class="st">'records'</span>), fig</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> no_update, no_update <span class="co">#won't update without new data</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="co">        to_dict('records') is necessary because Dash needs a JSON object</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="co">        these functions inherit the form of the callback (specifically the order);</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="co">        'stock-input' becomes stock_input arg, time-input becomes time_input arg</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="co">        output df.to_dict('records') becomes Output('data-table'), fig becomes Output('time-series-chart')</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>    app.run_server(debug<span class="op">=</span><span class="va">True</span>) <span class="co">#debug=True for debugging functionality</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>    main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -425,7 +418,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -457,47 +461,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/andrew-belz\.github\.io\/Data-Science-Portfolio\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -532,11 +496,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
