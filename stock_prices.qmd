@@ -2,14 +2,27 @@
 title: Stock Price Tracker Application
 ---
 
-# Still working on getting the app up and running on a server!
-## In the meantime, feel free to check out the code that I used.
+This project was built using Plotly Dash, a dashboard framework that is built on Flask. Through user input, a stock ticker and a time period can be specified, for which the application will:
+
+- Extract the data from the Yahoo Finance API
+- Transform the data appropriately using Pandas
+-  Create a time series graphical representation of the data with Plotly
+- Load both the plot and the table into the dashboard.
+
+Feel free to explore the app running with Render: 
+
+<a href='https://stock-price-dashboard.onrender.com/'>https://stock-price-dashboard.onrender.com/</a>
+
+It may take a minute or two to spin up in the server.
+
+In the meantime, check out the code I wrote to create the project:
 
 ```{python}
 #| eval: false
 #| include: true
 
 from dash import Dash, html, dash_table, dcc, Input, Output, State, no_update
+import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly_express as px
 import yfinance as yf
@@ -100,7 +113,7 @@ def get_ticker_history_fig(df, name):
         xaxis_title = 'Date',
         yaxis_title = 'Daily Closing Price (USD)',
         title = f'Closing Prices of Stocks over Time- {name}',
-        template = 'presentation'
+        template = 'plotly_dark'
     )
 
     return fig
@@ -115,7 +128,14 @@ def get_ticker_history_fig_day_price(df, name):
         xaxis_title = '',
         yaxis_title = 'Price',
         title = f"Today's Price- {name}",
-        template = 'presentation'
+        template = 'plotly_dark'
+    ).update_xaxes(
+        tickformat='%I:%M %p' 
+        
+        '''
+        can't figure out why this doesn't work; I want to format
+        the time ticks differently but it won't work properly
+        '''
     )
 
     return fig
@@ -124,81 +144,79 @@ def get_ticker_history_fig_day_price(df, name):
 
 '''APP STARTS HERE'''
 
-def main():
-    #initializes Dash object 'app'; however, an initial callback is still made
-    app = Dash(__name__)
+#initializes Dash object 'app'; however, an initial callback is still made
+app = Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
+server = app.server
 
-    ticker_object = get_ticker_object('^GSPC')
-    name = get_stock_name(ticker_object)
-    df = get_ticker_history_df(ticker_object)
-    fig = get_ticker_history_fig(df, name)
+ticker_object = get_ticker_object('^GSPC')
+name = get_stock_name(ticker_object)
+df = get_ticker_history_df(ticker_object)
+fig = get_ticker_history_fig(df, name)
 
 
-    #initializes layout of page
-    app.layout = html.Div([
-        html.Header([
-            html.H1('Stock Price Tracker', id = 'app-title', style = {'marginBottom': 5}),
-        html.H2(str(datetime.now().date().__format__('%B %d, %Y')), id = 'date-header', style = {'marginTop': 5})
-    ], id = 'header'),
-        html.P("Provide a ticker and select a time frame for data display. For example, FAANG tickers are 'FB', 'AMZN', 'AAPL', 'NFLX'; S&P 500 is '^GSPC'. For more info, visit the following site:"),
-        html.A('Yahoo Finance Lookup', href = 'https://finance.yahoo.com/lookup/', target='_blank', id = 'yf-link'),
-        html.Br(),
-        html.P('Select stock (press Enter to update):'),
-        dcc.Input(
-            id='stock-input',
-            type = 'text',
-            value = '^GSPC',
-            placeholder= 'Give any valid ticker (ex. ^GSCP is default):',
-            n_submit = 1
-        ),
-        html.P('Select timeframe:'),
-        dcc.Dropdown(
-            id = 'time-input',
-            options = ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'],
-            value = 'ytd', 
-            clearable = False
-        ),
-        html.Br(),
-        html.Hr(),
-        dcc.Graph(id='time-series-chart', style={'marginBottom': 20, 'marginTop': 20}),
-        html.Hr(style = {'marginBottom': 20}),
-        dash_table.DataTable(id= 'data-table', data=df.to_dict('records'), page_size = 10, style_table = {'backgroundColor': 'ivory'})
-    ])
+#initializes layout of page
+app.layout = html.Div([
+    html.Header([
+        html.H1('Stock Price Tracker', id = 'app-title', style = {'marginBottom': 5}),
+    html.H2(str(datetime.now().date().__format__('%B %d, %Y')), id = 'date-header', style = {'marginTop': 5})
+], id = 'header'),
+    html.Div([html.P("Provide a ticker and select a time frame for data display. For example, FAANG tickers are 'FB', 'AMZN', 'AAPL', 'NFLX'; S&P 500 is '^GSPC'. For more info, visit the following site: "), html.P(html.A(' Yahoo Finance Lookup', href = 'https://finance.yahoo.com/lookup/', target='_blank', id = 'yf-link', style= {'color': 'white'}))], 
+             style={'marginBottom':'15px'}
+             ),
+    html.P('Select stock (press Enter to update):'),
+    dcc.Input(
+        id='stock-input',
+        type = 'text',
+        value = '^GSPC',
+        placeholder= 'Give any valid ticker (ex. ^GSCP is default):',
+        n_submit = 1
+    ),
+    html.P('Select timeframe:'),
+    dcc.Dropdown(
+        id = 'time-input',
+        options = ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'],
+        value = 'ytd', 
+        clearable = False
+    ),
+    html.Br(),
+    html.Hr(),
+    dcc.Graph(id='time-series-chart', style={'marginBottom': 20, 'marginTop': 20}),
+    html.Hr(style = {'marginBottom': 20}),
+    dash_table.DataTable(id= 'data-table', data=df.to_dict('records'), page_size = 10, style_header={'backgroundColor': 'rgb(30, 30, 30)', 'color': 'white'}, style_data={'backgroundColor': 'rgb(50, 50, 50)', 'color': 'white'})
+])
 
-    #callback to the app; Input tracks input changes to produce Output
-    @app.callback(
-    [Output('data-table', 'data'), Output('time-series-chart', 'figure')],
-    [Input('stock-input', 'n_submit'), Input('time-input', 'value')],
-    [State('stock-input', 'value')]
+#callback to the app; Input tracks input changes to produce Output
+@app.callback(
+[Output('data-table', 'data'), Output('time-series-chart', 'figure')],
+[Input('stock-input', 'n_submit'), Input('time-input', 'value')],
+[State('stock-input', 'value')]
 )
 
-    #callback function associated with new ticker or time frame
-    def update(n_submit, time_input, stock_input,):
-        if (stock_input and n_submit > 0) or time_input: #if stock changes and 'Enter', or time input changes
-            try:
-                ticker_object = get_ticker_object(str(stock_input))
-                df = get_ticker_history_df(ticker_object, time = str(time_input))
-                name = get_stock_name(ticker_object)
-
-                if time_input != '1d':
-                    fig = get_ticker_history_fig(df, name)
-                elif time_input == '1d':
-                    fig = get_ticker_history_fig_day_price(df, name)
-            except:
-                df = pd.DataFrame(columns= ['Close (USD)', 'Date'])
-                return df.to_dict('records'), get_ticker_history_fig(df, 'Stock Not Found')
-
-            return df.to_dict('records'), fig
-        
-        return no_update, no_update #won't update without new data
-    '''
-        to_dict('records') is necessary because Dash needs a JSON object
-        these functions inherit the form of the callback (specifically the order);
-        'stock-input' becomes stock_input arg, time-input becomes time_input arg
-        output df.to_dict('records') becomes Output('data-table'), fig becomes Output('time-series-chart')
+#callback function associated with new ticker or time frame
+def update(n_submit, time_input, stock_input,):
+    if (stock_input and n_submit > 0) or time_input: #if stock changes and 'Enter', or time input changes
+        try:
+            ticker_object = get_ticker_object(str(stock_input))
+            df = get_ticker_history_df(ticker_object, time = str(time_input))
+            name = get_stock_name(ticker_object)
+            if time_input != '1d':
+                fig = get_ticker_history_fig(df, name)
+            elif time_input == '1d':
+                fig = get_ticker_history_fig_day_price(df, name)
+        except:
+            df = pd.DataFrame(columns= ['Close (USD)', 'Date'])
+            return df.to_dict('records'), get_ticker_history_fig(df, 'Stock Not Found')
+        return df.to_dict('records'), fig
+    
+    return no_update, no_update #won't update without new data
 '''
-    app.run_server(debug=True) #debug=True for debugging functionality
+    to_dict('records') is necessary because Dash needs a JSON object
+    these functions inherit the form of the callback (specifically the order);
+    'stock-input' becomes stock_input arg, time-input becomes time_input arg
+    output df.to_dict('records') becomes Output('data-table'), fig becomes Output('time-series-chart')
+'''
+     #debug=True for debugging functionality
 
 if __name__ == '__main__':
-    main()
+    app.run_server(debug=False)
 ```

@@ -59,4 +59,4 @@ May 2024 - Present
 
 Python: Pandas, NumPy, Scikit-learn, Plotly Express | R: ggplot, mosaic, tidyverse, R-markdown | SQL: SQLite, MySQL, ERDs | Hypothesis mesting | Statistical modeling | Data visualization | Data wrangling | Effective communication | Team collaboration | Problem-solving | Quality control
 
-<a href='project_files/resume_draft_2.pdf' target='_blank'><h3>Click here to download this resume</h3></a>
+<a href='project_files/Resume_Andrew_Belz.pdf' target='_blank'><h3>Click here to download this resume</h3></a>

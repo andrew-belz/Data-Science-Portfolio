@@ -9,12 +9,14 @@ Title: My Projects
 R-markdown analysis project using R: Uncovered trends in poverty and race in relation to crime rates using official US Census data. Showcased abilities in hypothesis testing, linear regression, ANOVA, model validation, API data extraction, exploratory data analysis, and data visualization (ggplot).
 
 <a href= 'project_files/inequality_analysis.html' class='project-view-links'><h3>CLICK HERE TO VIEW</h3></a>
+<hr>
 
 ## Project 2: Stock Price Tracking Application
 
 Python Application: implemented and automated ETL process to retrieve data from Yahoo Finance API via yfinance python module, appropriately transforming resulting data with pandas, and loading resulting data frame into a Plotly Dash app graphically and tabularly: Showcase abilities with Python, Dash, Plotly, Pandas, yfinance, HTML, and CSS.
 
 <a href= 'stock_prices.html' class='project-view-links'><h3>CLICK HERE TO VIEW</h3></a>
+<hr>
 
 ## Skills Developed
 These projects are intended to showcase the abilities I have developed in three main areas:
