@@ -171,9 +171,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>This project was built using Plotly Dash, a dashboard-making module that is built on Flask. Based on user input, a stock ticker and a time period can be specified, and the application will extract the data from the Yahoo Finance API, transform the data appropriately and create a time series graphical representation of the data, and load both this plot and the table into the dashboard.</p>
-<p>Feel free to explore the app running with Render: <a href="https://stock-price-dashboard.onrender.com/">https://stock-price-dashboard.onrender.com/</a></p>
+<p>Feel free to explore the app running with Render: <a href="https://stock-price-dashboard.onrender.com/">https://stock-price-dashboard.onrender.com/</a> Note: it may take a minute or two to spin up.</p>
 <p>Below is the code used to create this project:</p>
-<div id="2422fde6" class="cell" data-execution_count="1">
+<div id="963b6910" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> Dash, html, dash_table, dcc, Input, Output, State, no_update</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_bootstrap_components <span class="im">as</span> dbc</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
