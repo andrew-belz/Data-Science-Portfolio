@@ -9,7 +9,7 @@
 </div>
 
 <div class='welcome-element'>
-Hello! My name is Andrew Belz. I am a student at BYU-Idaho studying data science. On this website, you will find up-to-date information on projects I have accomplished, inside and outside of the classroom. This website is currently in the very beginning stages, so if you would like more information from me about anything, don't hesitate to reach out!
+Hello! My name is Andrew Belz. Since 2023, I have been a student at BYU-Idaho studying data science. Starting in January 2025, I will be pursuing a degree in statistics with an emphasis in data science at Brigham Young University in Provo, Utah.
 </div>
 </div>
 
