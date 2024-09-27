@@ -18,19 +18,30 @@ Passionate aspiring data scientist always looking for new challenges. Technicall
 ### [Project Experience Highlights](projects.html){.resume-project-link}
 
 <a href='project_files/inequality_analysis.html' class='resume-project-link'><h4>Socioeconomic Inequality Statistical Analysis</h4>
+<h5>BYU-Idaho</h5>
 
 Analysis Project using R: Uncovered trends in poverty and race in relation to crime rates using official US Census data. Showcased abilities in hypothesis testing, linear regression, ANOVA, model validation, API data extraction, exploratory data analysis, and data visualization (ggplot).</a>
 
 <a href='stock_prices.html' class='resume-project-link'><h4>Stock Price Tracking Application</h4>
+<h5>BYU-Idaho</h5>
 
 Python Application: implemented and automated ETL process to retrieve data from Yahoo Finance API via yfinance python module, appropriately transforming resulting data with pandas, and loading resulting data frame into a Plotly Dash app graphically and tabularly: Showcase abilities with Python, Dash, Plotly, Pandas, yfinance, HTML, and CSS.</a>
 
 ---
 
 ### Education
-<a href='https://www.byui.edu/catalog/#/programs/41PwqJ9RZ' class='resume-project-link'>Bachelor of Science in Data Science - Brigham Young University-Idaho\
-4.0 GPA\
-Relevant Coursework: Data Science Programming, Intermediate Statistics, Introduction to Databases</a>
+
+<h4>B.S. in Statistics, Emphasis in Data Science, Minor in Mathematics</h4>
+<h5>Expected December 2027</h5>
+<ul>
+<li><a href='https://catalog.byu.edu/programs/34708' class='resume-project-link'> Expected from Brigham Young University (Provo, UT)\
+Will attend Winter 2025 - Fall 2027</a></li></ul>
+<ul>
+<li><a href='https://www.byui.edu/catalog/#/programs/41PwqJ9RZ' class='resume-project-link'>Brigham Young University-Idaho</a>\
+Attending Fall 2023 - Fall 2024\
+4.0 GPA (on 4-point scale)\
+Relevant Coursework: Data Science Programming, Intermediate Statistics, Introduction to Databases
+</ul>
 
 ---
 
