@@ -1,17 +1,26 @@
 /* css styles */
-#welcome-container{
-    display: flex; 
-    justify-content: space-between; 
-    gap: 0px
+#welcome-container {
+    /* No display: flex needed here if you only want the float effect */
+    /* You might still want a max-width and margin: auto; to center the container */
+    max-width: 960px; /* Example max width */
+    margin: 0 auto; /* Center the container */
+    overflow: hidden; /* Clear floats within the container */
 }
 
-.welcome-element{
-    flex: auto;
-}
-
-#profile-picture{
-    width: 90%;
+#profile-picture {
+    width: 200px; /* Set a specific width for the image for better control */
     height: auto;
+    float: left; /* This is the magic for wrapping */
+    margin-right: 20px; /* Add some space between the image and the text */
+    margin-bottom: 15px; /* Add some space below the image */
+    border-radius: 50%; /* Optional: for a round profile picture */
+    shape-outside: circle(); /* Optional: for a smoother text wrap around a circle */
+    shape-margin: 10px; /* Optional: adds space between text and shape */
+}
+
+.welcome-element {
+    /* No flex: auto needed here if you use float */
+    /* The text will naturally flow around the floated image */
 }
 
 .quick-links-container{

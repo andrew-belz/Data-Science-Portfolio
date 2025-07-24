@@ -9,7 +9,7 @@
 </div>
 
 <div class='welcome-element'>
-Hello! My name is Andrew Belz. Since 2023, I have been a student at BYU-Idaho studying data science. Starting in January 2025, I will be pursuing a degree in statistics with an emphasis in data science at Brigham Young University in Provo, Utah.
+Hello! My name is Andrew Belz. I am currently pursuing a bachelor's degree in statistics and Brigham Young University, and expect to graduate in the spring of 2028. At BYU, I work as a research assistant in the math department under the advisement of Dr. Stephen McKean. I contribute to a team focused on designing and implementing graph-theoretic computational models with exciting applications in a wide variety of interdisciplinary fields. My interests are broad but generally lie in applying quantitative tools and mathematical frameworks to real-world problems in interdisciplinary fields like computational neuroscience, the social sciences, and more. After I finish my bachelor's degree, I aim to continue my education with a graduate degree in statistics to pursue more exciting research opportunities.
 </div>
 </div>
 
@@ -26,10 +26,4 @@ Hello! My name is Andrew Belz. Since 2023, I have been a student at BYU-Idaho st
 
 ## About Me
 
-I grew up in southern California, in a town called Simi Valley. I am the oldest of four; I have two younger sisters, and one younger brother. I love chess, cooking, and motorcycles! I will happily have a lengthy conversation about any of those topics, anywhere, anytime. 
-
-## About this Site
-
-I created this site for multiple purposes. First and foremost, I want to get my projects that I have worked on out there so that I can properly showcase my abilities! I love coming up with new projects to do, and I am constantly pushing myself beyond my limits. I love to experiment with new ideas and technologies so that I can grow as a professional and a person. I love to learn about math, science, and technology because that is what is driving innovation today. 
-
-I sincerely hope that this portfolio adequately represents my passion!
+I grew up in Simi Valley, California, and currently live in Provo, Utah. I am the oldest of four; I have two younger sisters, and one younger brother. Outside of school and work, I like to spend my free time playing chess, cooking, and riding motorcycles.

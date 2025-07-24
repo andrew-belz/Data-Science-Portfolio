@@ -1,6 +1,6 @@
 
 
-# ANDREW BELZ
+# ANDREW BELZ - THIS SITE IS UNDER CONSTRUCTION
 
 <div class='resume-contact'>
 <a href="https://github.com/pbelz1" target="_blank">GitHub</a>
@@ -11,7 +11,7 @@
 
 ---
 
-Passionate aspiring data scientist always looking for new challenges. Technically adept, with both mathematical and programming skills in statistics, Python, R, and SQL. Flexible and hard-working team player.
+Aspiring statistician always looking for intellectually-stimulating challenges. Technically adept, with both mathematical and programming skills in statistics, Python, R, and SQL. Flexible and hard-working team player.
 
 ---
 
