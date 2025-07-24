@@ -28,48 +28,6 @@
     "text": "Python Application: implemented and automated ETL process to retrieve data from Yahoo Finance API via yfinance python module, appropriately transforming resulting data with pandas, and loading resulting data frame into a Plotly Dash app graphically and tabularly: Showcase abilities with Python, Dash, Plotly, Pandas, yfinance, HTML, and CSS."
   },
   {
-    "objectID": "projects.html#skills-developed",
-    "href": "projects.html#skills-developed",
-    "title": "Signature Projects",
-    "section": "",
-    "text": "These projects are intended to showcase the abilities I have developed in three main areas:\n1. Python\nMy experience with python consists of the following:\n\nPandas\nNumPy\nScikit-learn\nAPI data extraction\nRequests\nData wrangling\nData visualization\nData manipulation\nExploratory data analysis\nmachine learning\nReading/writing to different file types\n.csv\n.json\nSQLite\nJupyter notebooks\nQuarto markdown\n\n2. R\nMy experience with R consists of the following:\n\nGGPlot\nMosaic\nTidyverse\nStatistics\nData wrangling\nData visualization\nData manipulation\nExploratory data analysis\nreading various file types\nR-markdown\n\n3. Statistics\nMy experience with statistics involves using R for data manipulation and analysis for the following techniques:\n\nHypothesis testing\nT-tests\nWilcoxon tests\nMann-Whitney tests\nAnalysis of variance (ANOVA)\nKruskal-Wallis tests\nChi-squared tests\nSimple and multiple linear regression\nSimple and multiple logistic regression\nPermutation testing\nModel validation"
-  },
-  {
-    "objectID": "projects.html#relevant-coursework",
-    "href": "projects.html#relevant-coursework",
-    "title": "Signature Projects",
-    "section": "Relevant Coursework",
-    "text": "Relevant Coursework\nThis section holds smaller projects completed as part of university course assignments.\n\nData Science ProgrammingIntermediate StatisticsIntroduction to Databases\n\n\n\nData Science Programming\nThis class focused on using Python for data wrangling, cleaning, visualization, analysis, and introductory machine learning.\n\n\n\n\nIntermediate Statistics\nThis class focused on using R for hypothesis testing, introductory regression techniques, model validation, and data wrangling, cleaning, and visualization.\n\n\n\n\nIntroduction to Databases\nThis class introduced relational databases. It focused on mapping entity-relationship diagrams (ERDs), writing SQL queries, and emphasized utilizing standard industry best practices for data storage and use."
-  },
-  {
-    "objectID": "projects.html#data-science-programming-1",
-    "href": "projects.html#data-science-programming-1",
-    "title": "Signature Projects",
-    "section": "Data Science Programming",
-    "text": "Data Science Programming\nThis class focused on using Python for data wrangling, cleaning, visualization, analysis, and introductory machine learning."
-  },
-  {
-    "objectID": "projects.html#intermediate-statistics-1",
-    "href": "projects.html#intermediate-statistics-1",
-    "title": "Signature Projects",
-    "section": "Intermediate Statistics",
-    "text": "Intermediate Statistics\nThis class focused on using R for hypothesis testing, introductory regression techniques, model validation, and data wrangling, cleaning, and visualization."
-  },
-  {
-    "objectID": "projects.html#introduction-to-databases-1",
-    "href": "projects.html#introduction-to-databases-1",
-    "title": "Signature Projects",
-    "section": "Introduction to Databases",
-    "text": "Introduction to Databases\nThis class introduced relational databases. It focused on mapping entity-relationship diagrams (ERDs), writing SQL queries, and emphasized utilizing standard industry best practices for data storage and use."
-  },
-  {
-    "objectID": "projects.html#minor-projects",
-    "href": "projects.html#minor-projects",
-    "title": "Signature Projects",
-    "section": "Minor Projects",
-    "text": "Minor Projects\nSometimes I complete projects that aren’t very large or significant, and yet still showcase my abilities in some way. This is where you can find these projects. They will be sorted by skills and technologies used."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome to my Portfolio!",
@@ -82,13 +40,6 @@
     "title": "Welcome to my Portfolio!",
     "section": "",
     "text": "I grew up in Simi Valley, California, and currently live in Provo, Utah. I am the oldest of four; I have two younger sisters, and one younger brother. Outside of school and work, I like to spend my free time playing chess, cooking, and riding motorcycles."
-  },
-  {
-    "objectID": "index.html#about-this-site",
-    "href": "index.html#about-this-site",
-    "title": "Welcome to my Portfolio!",
-    "section": "",
-    "text": "I created this site for multiple purposes. First and foremost, I want to get my projects that I have worked on out there so that I can properly showcase my abilities! I love coming up with new projects to do, and I am constantly pushing myself beyond my limits. I love to experiment with new ideas and technologies so that I can grow as a professional and a person. I love to learn about math, science, and technology because that is what is driving innovation today.\nI sincerely hope that this portfolio adequately represents my passion!"
   },
   {
     "objectID": "resume.html",

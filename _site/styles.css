@@ -18,11 +18,6 @@
     shape-margin: 10px; /* Optional: adds space between text and shape */
 }
 
-.welcome-element {
-    /* No flex: auto needed here if you use float */
-    /* The text will naturally flow around the floated image */
-}
-
 .quick-links-container{
     display: flex; 
     justify-content: space-between; 
