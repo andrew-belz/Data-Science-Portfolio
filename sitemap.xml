@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://andrew-belz.github.io/Data-Science-Portfolio/stock_prices.html</loc>
-    <lastmod>2024-09-11T07:53:34.983Z</lastmod>
-  </url>
-  <url>
     <loc>https://andrew-belz.github.io/Data-Science-Portfolio/projects.html</loc>
-    <lastmod>2025-07-24T23:45:04.914Z</lastmod>
-  </url>
-  <url>
-    <loc>https://andrew-belz.github.io/Data-Science-Portfolio/index.html</loc>
-    <lastmod>2025-07-25T00:32:25.416Z</lastmod>
+    <lastmod>2025-07-25T00:43:10.620Z</lastmod>
   </url>
   <url>
     <loc>https://andrew-belz.github.io/Data-Science-Portfolio/resume.html</loc>
-    <lastmod>2025-07-25T00:28:39.713Z</lastmod>
+    <lastmod>2025-07-25T00:43:10.620Z</lastmod>
+  </url>
+  <url>
+    <loc>https://andrew-belz.github.io/Data-Science-Portfolio/stock_prices.html</loc>
+    <lastmod>2025-07-25T00:43:10.620Z</lastmod>
+  </url>
+  <url>
+    <loc>https://andrew-belz.github.io/Data-Science-Portfolio/index.html</loc>
+    <lastmod>2025-07-25T00:43:10.613Z</lastmod>
   </url>
 </urlset>
