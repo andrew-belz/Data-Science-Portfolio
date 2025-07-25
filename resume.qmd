@@ -5,8 +5,7 @@
 <div class='resume-contact'>
 <a href="https://github.com/pbelz1" target="_blank">GitHub</a>
 <a href="https://www.linkedin.com/in/andrewbelz/" target="_blank">LinkedIn</a>
-<a href='mailto:andrewbelzjr@gmail.com' target='_blank'>andrewbelzjr@gmail.com</a>
-<a href='tel:+18056244436' target='_blank'>(805) 624-4436</a>
+<a href='mailto:pbelz@byu.edu' target='_blank'>pbelz@byu.edu</a>
 </div>
 
 ---

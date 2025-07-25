@@ -16,12 +16,12 @@ Hello! My name is Andrew Belz. I am currently pursuing a bachelor's degree in st
 <h2>Quick Links</h2>
 
 <div class='quick-links-container'>
-  <a href="resume.html" class='landing-page-links'>My Resume</a>
+  <a href="project_files/Andrew_Belz_Resume.pdf" class='landing-page-links'>My Resume</a>
   <a href="projects.html" class='landing-page-links'>Projects</a>
   <a class='landing-page-links' href="https://github.com/andrew-belz" target="_blank">GitHub</a>
   <a class='landing-page-links' href="https://www.linkedin.com/in/andrewbelz/" target="_blank">LinkedIn</a>
-  <a class='landing-page-links' href='mailto:andrewbelzjr@gmail.com' target='_blank'>Email Me</a>
-  <a class='landing-page-links' href='tel:+18056244436' target='_blank'>Call Me</a>
+  <a class='landing-page-links' href='mailto:andrewbelzjr@gmail.com' target='_blank'>Email me at pbelz@byu.edu</a>
+  <!--<a class='landing-page-links' href='tel:+18056244436' target='_blank'>(805) 624 4436</a>-->
 </div>
 
 ## About Me
