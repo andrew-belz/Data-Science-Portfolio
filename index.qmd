@@ -9,7 +9,7 @@
 </div>
 
 <div class='welcome-element'>
-Hello! My name is Andrew Belz. I am currently pursuing a bachelor's degree in statistics and Brigham Young University, and expect to graduate in the spring of 2028. At BYU, I work as a research assistant in the math department under the advisement of Dr. Stephen McKean. I contribute to a team focused on designing and implementing graph-theoretic computational models with exciting applications in a wide variety of interdisciplinary fields. My interests are broad but generally lie in applying quantitative tools and mathematical frameworks to real-world problems in interdisciplinary fields like computational neuroscience, the social sciences, and more. After I finish my bachelor's degree, I aim to continue my education with a graduate degree in statistics to pursue more exciting research opportunities.
+Hello! My name is Andrew Belz. I am currently pursuing a bachelor's degree in statistics and Brigham Young University, and expect to graduate in the spring of 2028. At BYU, I work as a research assistant in the math department under the advisement of Dr. Stephen McKean. I contribute to a team focused on designing and implementing graph-theoretic computational models with exciting applications in many different fields. My interests are broad but generally lie in applying quantitative tools and mathematical frameworks to real-world problems. After I finish my bachelor's degree, I aim to continue my education with a graduate degree in statistics to pursue more exciting research opportunities.
 </div>
 </div>
 
